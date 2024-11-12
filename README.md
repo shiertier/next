@@ -55,10 +55,9 @@ Licensed under the [MIT license](https://github.com/nextui-org/next-app-template
 # 更新记录
 
 ## v0.0.3 (2024-03-21)
-- new-icons.tsx -> icons.tsx
-- icons.tsx 移除
-- next.config.js 全面使用turbo
-- 修复了v 0.0.2 的错误
+- 合并 new-icons.tsx 和 icons.tsx，统一使用 icons.tsx
+- next.config.js 启用 turbo 以提升构建性能
+- 修复 v0.0.2 版本中的问题
 
 ## v0.0.2 (2024-03-21)
 - 添加 @svgr/webpack 支持 SVG 文件导入，修改文件next.config.js
@@ -68,3 +67,18 @@ Licensed under the [MIT license](https://github.com/nextui-org/next-app-template
 ## v0.0.1 (2024-03-21)
 - 优化 error.tsx 的错误处理
 - 迁移到 pnpm 包管理器
+
+# 提交示例（用于cursor自动提交）
+
+```bash
+# 提交更改
+git add .
+git commit -m "{提交信息}"
+
+# 创建新标签
+git tag v{版本号}
+
+# 推送更改和标签
+git push origin main
+git push origin v{版本号}
+```
