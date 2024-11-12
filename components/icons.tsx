@@ -1,5 +1,7 @@
 'use client';
 
+// 图标组件
+
 import * as React from "react";
 import { IconSvgProps } from "@/types";
 
@@ -32,15 +34,15 @@ import SearchSvg from '@/public/logo/search.svg';            // 搜索功能图�
 
 // 使用工厂函数批量创建并导出图标组件
 export const [
-  HuggingFaceIcon,   // HuggingFace平台图标组件
-  DiscordIcon,       // Discord社区图标组件
-  TwitterIcon,       // Twitter社交图标组件
-  GithubIcon,        // Github仓库图标组件
-  Logo,              // NextUI框架logo组件
-  MoonFilledIcon,    // 夜间模式切换图标组件
-  SunFilledIcon,     // 日间模式切换图标组件
-  HeartFilledIcon,   // 喜欢/收藏功能图标组件
-  SearchIcon,        // 搜索功能图标组件
+  HuggingFaceIcon,   
+  DiscordIcon,       
+  TwitterIcon,       
+  GithubIcon,        
+  Logo,              
+  MoonFilledIcon,    
+  SunFilledIcon,     
+  HeartFilledIcon,   
+  SearchIcon,        
 ] = [
   HuggingFaceSvg,
   DiscordIconSvg,
@@ -52,3 +54,15 @@ export const [
   HeartFilledSvg,
   SearchSvg,
 ].map(createSvgIcon);  // 使用map批量转换SVG为React组件
+
+export const Icon = {
+  HuggingFace: HuggingFaceIcon,
+  Discord: DiscordIcon,
+  Twitter: TwitterIcon,
+  Github: GithubIcon,
+  Logo: Logo,
+  MoonFilled: MoonFilledIcon,
+  SunFilled: SunFilledIcon,
+  HeartFilled: HeartFilledIcon,
+  Search: SearchIcon,
+} as const;
