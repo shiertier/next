@@ -1,0 +1,13 @@
+# 1. 生成新的 SSH 密钥对
+ssh-keygen -t ed25519 -C "junjie.text@gmail.com"
+# 按照提示操作，直接按 Enter 使用默认路径 (/root/.ssh/id_ed25519)
+# 可以选择设置密码短语（passphrase）或直接按 Enter 跳过
+
+# 2. 确认密钥已生成
+ls -la ~/.ssh/
+
+# 3. 启动 ssh-agent（您已经执行过了）
+eval "$(ssh-agent -s)"
+
+# 4. 添加私钥
+ssh-add ~/.ssh/id_ed25519

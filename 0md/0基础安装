@@ -1,0 +1,30 @@
+# nodejs安装
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+```bash
+node --version
+npm --version
+```
+
+# 安装pnpm
+
+```bash
+npm install -g pnpm
+```
+
+# 安装react+nextui+nextjs
+
+```bash
+pnpm create next-app -e https://github.com/nextui-org/next-app-template
+```
+或者使用
+
+```bash
+git clone https://github.com/nextui-org/next-app-template
+cd next-app-template
+pnpm install
+```
