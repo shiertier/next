@@ -1,16 +1,12 @@
 /** @type {import('next').NextConfig} */
 
-const nextConfig = {
-    webpack(config) {
-      config.module.rules.push(
-        {
-          type: 'asset',
-          resourceQuery: /url/, // *.svg?url
-        },
-        {
-          test: /\.svg$/i,
-          issuer: /\.[jt]sx?$/,
-          use: [{
+module.exports = {
+  experimental: {
+    turbo: {
+      enabled: true,
+      rules: {
+        '*.svg': {
+          loaders: [{
             loader: '@svgr/webpack',
             options: {
               svgo: true,
@@ -20,23 +16,17 @@ const nextConfig = {
                     name: 'preset-default',
                     params: {
                       overrides: {
-                        removeViewBox: false
+                        removeViewBox: false // 确保viewBox属性被保留
                       }
                     }
                   }
                 ]
               }
             }
-          }]
-        }
-      );
-  
-      return config;
+          }],
+          as: '*.js', // 将处理后的 SVG 作为 JS 模块导入
+        },
+      },
     },
-    
-    experimental: {
-        turbo: {enabled: false}
-      }
-  };
-  
-module.exports = nextConfig; 
+  },
+}

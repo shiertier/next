@@ -54,6 +54,12 @@ Licensed under the [MIT license](https://github.com/nextui-org/next-app-template
 
 # 更新记录
 
+## v0.0.3 (2024-03-21)
+- new-icons.tsx -> icons.tsx
+- icons.tsx 移除
+- next.config.js 全面使用turbo
+- 修复了v 0.0.2 的错误
+
 ## v0.0.2 (2024-03-21)
 - 添加 @svgr/webpack 支持 SVG 文件导入，修改文件next.config.js
 - 禁用 turbo，修改文件next.config.js
