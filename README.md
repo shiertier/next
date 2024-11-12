@@ -51,3 +51,14 @@ After modifying the `.npmrc` file, you need to run `pnpm install` again to ensur
 ## License
 
 Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+
+# 更新记录
+
+## v0.0.2 (2024-03-21)
+- 添加 @svgr/webpack 支持 SVG 文件导入，修改文件next.config.js
+- 禁用 turbo，修改文件next.config.js
+- 增加 svg 图标支持，创建文件components/new-icons.tsx
+
+## v0.0.1 (2024-03-21)
+- 优化 error.tsx 的错误处理
+- 迁移到 pnpm 包管理器
