@@ -1,0 +1,249 @@
+# mdx
+
+# 零、常用属性
+
+## 宽度 maxWidth
+- sm: 540px
+- md: 720px
+- lg: 960px
+- xl: 1200px
+- 2xl: 1536px
+- 3xl: 1920px
+- 4xl: 2560px
+- full: 100%
+
+## 位置 position
+- fixed: 固定导航栏
+- static: 静态导航栏
+- sticky: 粘性导航栏
+
+## 对齐方式 justify
+- start: 左对齐
+- center: 居中对齐
+- end: 右对齐
+
+# 一、组件
+
+## NextUINavbar
+介绍：导航栏组件
+
+属性：
+    maxWidth: 宽度
+    position: 导航栏位置
+
+## NavbarContent
+介绍：导航栏内容组件
+
+属性：
+    justify: 对齐方式
+
+## NavbarBrand
+介绍：导航栏品牌组件
+
+属性：
+    as: 标签类型
+
+## NavbarItem
+介绍：导航栏项目组件
+
+1. 为每个导航项提供统一的容器
+2. 处理布局和样式的一致性
+3. 可能包含额外的交互逻辑
+
+## NavbarMenu
+介绍：导航栏菜单组件
+
+## NextLink
+介绍：链接组件
+
+属性：
+    key: 链接地址
+
+## Link @nextui-org/link
+介绍：链接组件
+
+属性：
+    isExternal: 是否为外部链接
+    aria-label: 链接标签
+    href: 链接地址
+
+
+
+# 一、属性
+
+## isExternal: 为外部链接
+
+## as: 标签类型
+介绍：设置组件的标签类型
+参数：
+- li: li标签
+- a: a标签
+- button: button标签
+- 等
+
+## className: 类名
+见 # 二、classname
+
+## href: 链接地址
+介绍：设置组件的链接地址
+
+## startContent: 左侧内容
+左侧内容
+
+## endContent: 右侧内容
+右侧内容
+
+## variant: 按钮类型
+介绍：设置组件的按钮类型
+参数：
+- flat: 平面按钮
+- solid: 实心按钮
+- light: 浅色按钮
+- shadow: 阴影按钮
+- outline: 轮廓按钮
+- ghost: 幽灵按钮
+
+
+
+
+
+
+
+# 二、classname
+
+## flex
+flex-{$key}
+功能：设置组件的布局方式
+
+参数： 
+- 空(自适应), 
+- grow(自适应剩余空间), 
+- none(固定), 
+- col(列), 
+- row(行), 
+- 1, 2, 3, 4等
+
+## basis
+basis-{$key}
+功能：设置组件的屏幕宽度
+
+参数： 
+- full
+- 比例, 例如1/5
+
+## gap
+gap-{$key}
+功能：设置组件之间的间距
+
+参数： 
+- 空(等同于不设置), 
+- 1, 2, 3, 4等
+每增加1, 间距增加0.25rem
+
+## justify
+justify-{$key}
+功能：设置组件的对齐方式
+
+参数： 
+- 空(等同于不设置), 
+- start, 
+- center, 
+- end等
+
+## items
+items-{$key}
+功能：设置组件的垂直对齐方式
+
+参数： 
+- 空(等同于不设置), 
+- center, 
+- start, 
+- end等
+
+## font
+font-{$key}
+功能：设置组件的字体
+
+参数： :
+- 空(等同于不设置), 
+- bold(加粗), 
+- medium(中等), 
+- normal(正常), 
+- light(细体), 
+- semibold(半加粗), 
+- thin(细体), 
+- ultrabold(超粗), 
+- ultralight(超细)
+
+## text
+text-{$key}
+功能：设置组件的文本颜色
+
+参数： 
+- 空(等同于不设置), 
+- inherit(继承), 
+- primary(主色), 
+- secondary(次色), 
+- success(成功), 
+- warning(警告), 
+- danger(危险)
+- 等
+
+## hidden
+hidden
+功能：隐藏组件
+
+## ml
+ml-{$key}
+功能：设置组件的左外边距
+
+参数： 
+- 空(等同于不设置), 
+- 1, 2, 3, 4等
+每增加1, 外边距增加0.25rem
+
+## mr
+mr-{$key}
+功能：设置组件的右外边距
+
+## mx
+mx-{$key}
+功能：设置组件的左右外边距
+
+## mt
+mt-{$key}
+功能：设置组件的上外边距
+
+## mb
+mb-{$key}
+功能：设置组件的下外边距
+
+## my
+my-{$key}
+功能：设置组件的上下外边距
+
+## pl
+pl-{$key}
+功能：设置组件的左内边距
+
+## border
+border-{$key}
+功能：设置组件的边框
+
+
+
+# 五、其他
+
+## as
+介绍：设置组件的标签类型
+例如：
+li: li标签
+
+
+
+
+NavbarBrand:                        # 导航栏品牌组件
+    as:
+        keys:
+            li: li
+

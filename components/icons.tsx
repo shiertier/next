@@ -24,6 +24,7 @@ import HuggingFaceSvg from '@/public/logo/huggingface.svg';  // HuggingFace平�
 import DiscordIconSvg from '@/public/logo/discord.svg';      // Discord社区图标
 import TwitterIconSvg from '@/public/logo/twitter.svg';      // Twitter社交图标
 import GithubIconSvg from '@/public/logo/github.svg';        // Github仓库图标
+import QQIconSvg from '@/public/logo/qq.svg';               // QQ社交图标
 
 // 主题和功能图标导入
 import LogoSvg from '@/public/logo/nextui.svg';              // NextUI框架logo
@@ -31,6 +32,33 @@ import MoonFilledSvg from '@/public/logo/moon.svg';          // 夜间模式图�
 import SunFilledSvg from '@/public/logo/sun.svg';           // 日间模式图标
 import HeartFilledSvg from '@/public/logo/heart.svg';        // 喜欢/收藏图标
 import SearchSvg from '@/public/logo/search.svg';            // 搜索功能图标
+
+// 使用图片作为图标
+export const ShiertierLogoRound = () => (
+  <div className="flex items-center">
+    <div className="relative">
+      <img 
+        src="/shiertier.jpg" 
+        alt="SHIERTIER Logo"
+        className="h-8 w-8 object-contain rounded-full"
+      />
+      <div className="absolute inset-0 rounded-full border-1 border-black dark:border-white" 
+        style={{ boxShadow: 'inset 0 0 0 0px currentColor' }}
+      />
+    </div>
+  </div>
+);
+
+export const ShiertierLogo = () => (
+    <div className="flex items-center">
+    <img 
+      src="/shiertier.jpg" 
+      alt="SHIERTIER Logo"
+      className="h-8 w-8 object-contain"  // 调整大小并保持比例
+    />
+  </div>
+);
+
 
 // 使用工厂函数批量创建并导出图标组件
 export const [
@@ -43,6 +71,7 @@ export const [
   SunFilledIcon,     
   HeartFilledIcon,   
   SearchIcon,        
+  QQIcon,
 ] = [
   HuggingFaceSvg,
   DiscordIconSvg,
@@ -53,16 +82,5 @@ export const [
   SunFilledSvg,
   HeartFilledSvg,
   SearchSvg,
+  QQIconSvg,
 ].map(createSvgIcon);  // 使用map批量转换SVG为React组件
-
-export const Icon = {
-  HuggingFace: HuggingFaceIcon,
-  Discord: DiscordIcon,
-  Twitter: TwitterIcon,
-  Github: GithubIcon,
-  Logo: Logo,
-  MoonFilled: MoonFilledIcon,
-  SunFilled: SunFilledIcon,
-  HeartFilled: HeartFilledIcon,
-  Search: SearchIcon,
-} as const;

@@ -2,53 +2,12 @@
 
 这是一个用于创建使用 Next.js 14（应用程序目录）和 NextUI（v2）的应用程序的模板。
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
-
-## 使用的技术
-
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
-
-## 如何使用
-
-### 使用 create-next-app 创建新项目
-
-要使用 `create-next-app` 基于此模板创建新项目，请运行以下命令：
-
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
-
-### 安装依赖
-
-你可以使用 `npm`, `yarn`, `pnpm`, `bun` 等包管理器，以下是使用 `npm` 的示例：
-
-```bash
-npm install
-```
-
-### 运行开发服务器
-
-```bash
-npm run dev
-```
-
-### 设置 pnpm（可选）
-
-如果你使用 `pnpm`，你需要将以下代码添加到你的 `.npmrc` 文件中：
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-修改 `.npmrc` 文件后，你需要再次运行 `pnpm install` 以确保依赖项正确安装。
-
 # 更新记录
+
+## v0.0.5
+- 结构化 navbar 组件
+- 增加 sidebar 组件
+- 增加 qq 社交图标
 
 ## v0.0.4
 - 修改 .npmrc 文件，添加 public-hoist-pattern 配置
